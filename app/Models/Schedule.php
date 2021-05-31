@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+      'date' => 'datetime',
+      'start_time' => 'datetime',
+      'end_time' => 'datetime',
+    ];
 }
